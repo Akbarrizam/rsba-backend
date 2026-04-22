@@ -83,7 +83,7 @@ const PrediksiUGD = () => {
 
           {/* Render Grafik Batang Kustom */}
           <div className="flex items-end justify-between gap-2 md:gap-6 h-64 mt-8">
-            {dataPrediksi.map((data, index) => {
+            {dataPrediksi?.map((item, index) => {
               // Hitung persentase tinggi batang (Maksimal 100%)
               const tinggiPersen = (data.estimasi / maxEstimasi) * 100;
               

@@ -119,7 +119,7 @@ const TelemedicineRoom = () => {
             
             {/* REF DIPASANG DI SINI UNTUK AUTO-SCROLL */}
             <div ref={chatContainerRef} className="flex-1 p-4 overflow-y-auto space-y-4">
-              {chatLog.map((c, i) => (
+              {chatLog?.map((c, i) => (
                 <div key={i} className={`flex flex-col ${c.isSystem ? 'items-center' : c.isDokter ? 'items-start' : 'items-end'}`}>
                   <div className={`p-3 rounded-2xl max-w-[85%] text-sm shadow-md ${c.isSystem ? 'text-[10px] text-slate-400 bg-slate-800 uppercase px-4' : c.isDokter ? 'bg-slate-800 text-slate-200 rounded-tl-sm' : 'bg-blue-600 text-white rounded-tr-sm'}`}>
                     {!c.isSystem && <div className="flex justify-between items-end gap-3 mb-1"><span className="font-bold text-xs opacity-70">{c.pengirim}</span><span className="text-[10px] opacity-50">{c.waktu}</span></div>}
