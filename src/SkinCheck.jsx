@@ -22,7 +22,7 @@ const SkinCheck = () => {
     formData.append('file', image);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/analyze-skin', {
+      const response = await fetch('https://rizmanxx-rsba-backend.hf.space', {
         method: 'POST',
         body: formData,
       });

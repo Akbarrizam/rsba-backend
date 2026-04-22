@@ -10,7 +10,7 @@ const PrediksiUGD = () => {
     setLoading(true);
     try {
       // Mengambil data dari otak ANN Python kita
-      const response = await fetch('http://127.0.0.1:8000/predict-ugd');
+      const response = await fetch('https://rizmanxx-rsba-backend.hf.space');
       const data = await response.json();
       setDataPrediksi(data.data_prediksi);
       setWaktuUpdate(data.waktu_update);

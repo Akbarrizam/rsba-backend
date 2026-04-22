@@ -35,7 +35,7 @@ const TelemedicineRoom = () => {
       setIsTyping(true);
 
       try {
-        const res = await fetch('http://127.0.0.1:8000/chat-dokter', {
+        const res = await fetch('https://rizmanxx-rsba-backend.hf.space', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ pesan_pasien: userMsg })
